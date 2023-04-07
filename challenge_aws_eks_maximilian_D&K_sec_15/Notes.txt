@@ -1,0 +1,9 @@
+Attach AWS EFS volume to the Kuberntets application deployment:
+- CSI [Container Storage Interface] ==> Very flexible volume type where third part developers can add thier own integration
+and thier own volume types with ease  
+- We need to install AWS EFS driver within our cluster since AWS EFS is not supported as volume type [Local Development
+of K8s]
+- Provision the EFS on your aws account 
+- Don't forget to configure proper SG EC2 "worker-nodes" <==> EFS
+- Now start edit your mainfaists kubernetes files to create your PV EFS attahemnt
+- Don't forget to configure your storage-class type 
